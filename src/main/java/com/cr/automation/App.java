@@ -33,7 +33,7 @@ public class App {
 
 		try {
 			// dg.test();
-			dg.test2(brand, locale, country, region, testUrl, uatUrl, uatPreviewUrl, prodUrl, prodPreviewUrl,
+			dg.generateDoc(brand, locale, country, region, testUrl, uatUrl, uatPreviewUrl, prodUrl, prodPreviewUrl,
 					isDualLanguage, secondLocale);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

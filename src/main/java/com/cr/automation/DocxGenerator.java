@@ -109,7 +109,7 @@ public class DocxGenerator {
 
 	}
 
-	public void test2(String brand, String locale, String country, String region, String testUrl, String uatUrl,
+	public void generateDoc(String brand, String locale, String country, String region, String testUrl, String uatUrl,
 			String uatPreviewUrl, String prodUrl, String prodPreviewUrl, String isDualLanguage, String secondLocale)
 			throws Exception {
 		
@@ -133,12 +133,13 @@ public class DocxGenerator {
 		variables.put("brand", brand);
 		variables.put("country", country);
 		variables.put("locale", locale);
-		variables.put("locale", secondLocale);
+		variables.put("secondLocale", secondLocale);
 		variables.put("region", region);
 
 		String directoryName = "target/";
 
 		/* Reading Templates */
+		System.out.println(isDualLanguage.equalsIgnoreCase("true"));
 		if (isDualLanguage.equalsIgnoreCase("true")) {
 			templateInputStream = this.getClass().getClassLoader().getResourceAsStream("templateUat2.docx");
 			templateInputStream2 = this.getClass().getClassLoader().getResourceAsStream("templateTest2.docx");
